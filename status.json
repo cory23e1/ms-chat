@@ -1,4 +1,9 @@
 {
+  "ебан": {
+    "status": "online",
+    "lastSeen": 1768385334196,
+    "sessionId": "1768385113324_y0qw1p14o"
+  },
   "Гость": {
     "status": "online",
     "lastSeen": 1768385139483,
@@ -13,10 +18,5 @@
     "status": "online",
     "lastSeen": 1768385119215,
     "sessionId": "1768385119209_bhmao2bdq"
-  },
-  "ебан": {
-    "status": "online",
-    "lastSeen": 1768385250553,
-    "sessionId": "1768385113324_y0qw1p14o"
   }
 }
