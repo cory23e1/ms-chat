@@ -1,12 +1,12 @@
 {
+  "лох педальный": {
+    "status": "away",
+    "lastSeen": 1768375517969,
+    "sessionId": "1768375276714_eqmemvc0n"
+  },
   "ебан": {
     "status": "online",
     "lastSeen": 1768375482450,
     "sessionId": "1768375253907_gi7g8ask5"
-  },
-  "лох педальный": {
-    "status": "online",
-    "lastSeen": 1768375389858,
-    "sessionId": "1768375276714_eqmemvc0n"
   }
 }
