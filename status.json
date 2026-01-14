@@ -1,12 +1,12 @@
 {
+  "ебан": {
+    "status": "online",
+    "lastSeen": 1768391580418,
+    "sessionId": "1768391451143_rymrvpn6k"
+  },
   "даун": {
     "status": "online",
     "lastSeen": 1768391434705,
     "sessionId": "1768391365572_0qomb1hzh"
-  },
-  "ебан": {
-    "status": "online",
-    "lastSeen": 1768391344042,
-    "sessionId": "1768391293400_fy1d4f8by"
   }
 }
