@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МС Чат</title>
+    <!-- Подключаем jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Иконки -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1><i class="fa-solid fa-poo"></i> МС Чат</h1>
+
+            <p>Мессенджер • Адаптация • Задания • Награды • Мероприятия</p>
+        </div>
+        
+        <div class="chat-main">
+            <div class="sidebar">
+                <div class="user-profile">
+                    <div class="avatar-container">
+                        <img src="https://ui-avatars.com/api/?name=Гость&background=6a11cb&color=fff&size=200" 
+                             class="user-avatar" id="userAvatar" alt="Аватар">
+                        <label class="avatar-upload-label">
+                            <i class="fas fa-camera"></i>
+                            <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+                        </label>
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name" id="userName">Гость</div>
+                        <div class="user-status online" id="userStatus">
+                            <div class="status-dot online" id="statusDot"></div>
+                            <span id="statusText">В сети</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="users-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-users"></i>
+                        Участники
+                    </h3>
+                    <div class="user-list" id="userList">
+                        <div class="loading">Загрузка...</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-area">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="loading" id="loadingMessages">
+                        <div style="margin-bottom: 20px;">
+                            <i class="fas fa-spinner fa-spin fa-2x"></i><br>
+                            Загрузка сообщений...
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-area">
+                    <div class="reply-preview" id="replyPreview" style="display: none;">
+                        <div class="reply-info">
+                            <div class="reply-to">Ответ на сообщение:</div>
+                            <div class="reply-content" id="replyContent"></div>
+                        </div>
+                        <button class="cancel-reply" id="cancelReply">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="attachments-preview" id="previewContainer" style="display: none;"></div>
+                    
+                    <div class="input-row">
+                        <textarea id="messageInput" 
+                                  placeholder="Напишите сообщение... (Enter - отправить, Shift+Enter - новая строка)"
+                                  rows="3"></textarea>
+                        
+                        <div class="input-actions">
+                            <button class="input-action-btn" id="emojiBtn">
+                                <i class="far fa-smile"></i>
+                                <div class="emoji-picker" id="emojiPicker"></div>
+                            </button>
+                            
+                            <label class="input-action-btn" id="fileBtn">
+                                <i class="fas fa-paperclip"></i>
+                                <input type="file" id="fileInput" multiple style="display: none;">
+                            </label>
+                        </div>
+                        
+                        <button id="sendButton">
+                            <i class="fas fa-paper-plane"></i>
+                            Отправить
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status-bar">
+            <div id="connectionStatus">
+                <i class="fas fa-circle" style="color: #2ecc71;"></i>
+                Подключение...
+            </div>
+            <div id="messageCount">Сообщений: 0</div>
+        </div>
+    </div>
+    
+    <!-- Модальное окно для просмотра изображений -->
+    <div class="image-modal" id="imageModal">
+        <span class="close-modal">&times;</span>
+        <img class="image-modal-content" id="modalImage">
+    </div>
+    
+    <button class="scroll-btn" id="scrollDownBtn">
+        <i class="fas fa-arrow-down"></i>
+    </button>
+    
+    <div class="notification" id="notification"></div>
+</body>
+<script src="script.js"></script>
+</html>
